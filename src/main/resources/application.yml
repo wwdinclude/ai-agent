@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: ai-agent
+  profiles:
+    active: local
+  ai:
+#    ollama:
+#      base-url: http://localhost:11434
+#      chat:
+#        model: gemma3:1b
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        dimensions: 1536
+        distance-type: COSINE_DISTANCE
+        max-document-batch-size: 10000
+    mcp:
+      client:
+        sse:
+          connections:
+            server1:
+              url: http://localhost:8127
+#        stdio:
+#          config-path: classpath:mcp-servers.json
+server:
+  port: 8124
+  servlet:
+    context-path: /api
+# springdoc-openapi ??????
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.yupi.aiagent.controller
+# knife4j ?????
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+# 搜索 API 配置
+#search-api:
+#  api-key:
+# spring AI 日志配置
+#logging:
+#  level:
+#    arg.springframework.ai: debug
