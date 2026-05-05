@@ -1,7 +1,7 @@
 ## 注意事项
 jdk为21及以上，使用阿里云百炼平台模型，模型可以自由选择  
 我的 application-local.yml 和 mcp-servers.json 未上传，请自己配置自己的api-key  
-aly的学生包不能给域名备案，所以没办法给链接了，直接放ECS的公网IP的话还是太开放了
+aly的学生包不能给域名备案，所以没办法给项目演示的链接了，直接放ECS的公网IP的话还是太开放了
 ## 项目介绍
 基于Spring AI 和 Spring AI  alibaba开发  
 技术栈：Prompt 工程和优化技巧，Spring AI 核心特性：如自定义 Advisor、对话记忆、结构化输出，RAG 知识库实战、原理和调优技巧，PgVector 向量数据库 + 云数据库服务，
